@@ -2,32 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+
+<div id="popup-overlay" class="overlay">
+  <div id="popup" class="popup">
+    <span id="popup-close" class="popup-close">&times;</span>
+    <div class="popup-content">
+      <h2>HOLD UP</h2>
+      <p>This is a sample popup with some random text.</p>
+    </div>
+  </div>
+</div>
+
 <nav class="navbar">
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
     <div class="navbar-container">
         <div class="logo">
             <a id="logo-link" href="home.html">
                 <img src="slike/logo.PNG" alt="Logo">
             </a>
         </div>
-        <ul class="nav-links">
-            <li><a id="link1" href="#stavka1" class="nav-link">Metzgerei</a></li>
-            <li><a id="link2" href="#stavka2" class="nav-link">Events/Kurse</a></li>
-            <li><a id="link3" href="#stavka3" class="nav-link">Fleischversand</a></li>
-            <li><a id="link4" href="#stavka4" class="nav-link">Theke</a></li>
-            <li><a id="link5" href="#stavka5" class="nav-link">Big Green Egg</a></li>
-            <li><a id="link6" href="arbeitsplatze.html" class="nav-link">Arbeitsplätze</a></li>
-            <li><a id="link7" href="#stavka7" class="nav-link">Kontakt</a></li>
-            <li class="multi-line">
-                <a id="link8" href="#stavka8" class="nav-link">Tagesessen und Imbiss 📄</a>
-                <a id="link9" href="#stavka9" class="nav-link">Catering Katalog 📄</a>
-            </li>
-        </ul>
+
+        <!-- MENI ZA PC --> 
+
+        <ul class="nav-links" id="nav-links">
+          <li><a id="link1" href="#stavka1" class="nav-link">Metzgerei</a></li>
+          <li><a id="link2" href="#stavka2" class="nav-link">Events/Kurse</a></li>
+          <li><a id="link3" href="#stavka3" class="nav-link">Fleischversand</a></li>
+          <li><a id="link4" href="#stavka4" class="nav-link">Theke</a></li>
+          <li><a id="link5" href="#stavka5" class="nav-link">Big Green Egg</a></li>
+          <li><a id="link6" href="arbeitsplatze.html" class="nav-link">Arbeitsplätze</a></li>
+          <li><a id="link7" href="#stavka7" class="nav-link">Kontakt</a></li>
+          <li class="multi-line">
+              <a id="link8" href="#stavka8" class="nav-link">Tagesessen und Imbiss 📄</a>
+              <a id="link9" href="#stavka9" class="nav-link">Catering Katalog 📄</a>
+          </li>
+      </ul>
+
+      <!-- MENI ZA MOBILNI --> 
+
+        <div class="burgerdropdown">
+          <button class="hamburger">
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+          </button>
+          <ul class="menu">
+              <li><a id="link1" href="#stavka1" class="menuItem">Metzgerei</a></li>
+              <li><a id="link2" href="#stavka2" class="menuItem">Events/Kurse</a></li>
+              <li><a id="link3" href="#stavka3" class="menuItem">Fleischversand</a></li>
+              <li><a id="link4" href="#stavka4" class="menuItem">Theke</a></li>
+              <li><a id="link5" href="#stavka5" class="menuItem">Big Green Egg</a></li>
+              <li><a id="link6" href="arbeitsplatze.html" class="menuItem">Arbeitsplätze</a></li>
+              <li><a id="link7" href="#stavka7" class="menuItem">Kontakt</a></li>
+              <li class="multi-line">
+                  <a id="link8" href="#stavka8" class="menuItem">Tagesessen und Imbiss 📄</a>
+                  <a id="link9" href="#stavka9" class="menuItem">Catering Katalog 📄</a>
+              </li>
+          </ul>
+        </div>
     </div>
 </nav>
+    
 
 <div class="text-container">
     <p><b>🕗 Öffnungszeiten:</b> Di, Mi, Do & Fr: 07:00-13:00 und 15:00-18:30. , Sa: 07:30-12:30</p>
@@ -35,22 +76,46 @@
 
 
 
-<div class="banner">
-    <img src="slike/bg1.png" alt="bg1">
-    <div class="text-overlay">
-        <h2> BRATH</h2>
-        <h3>unser Ladengeschäft</h3>
-        <p>
-            Seit 1899 existiert am Standort<br>
-            Klauprechtstraße bereits eine Metzgerei.<br>
-            Ursprünglich von den Familien Ade und<br>
-            Merkle betrieben, wurde der Betrieb im<br>
-            Jahre 1960 vom Firmengründer Hans Brath<br>
-            übernommen. Nunmehr in zweiter<br>
-            Generation betreiben Heike & Heiko Brath<br>
-            das Geschäft schon seit 1998.
-        </p>
+
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="slike/bg1.png" alt="bg1">
+            <div class="text-overlay">
+                <h2>BRATH</h2>
+                <h3>unser Ladengeschäft</h3>
+                <p>
+                    Seit 1899 existiert am Standort<br>
+                    Klauprechtstraße bereits eine Metzgerei.<br>
+                    Ursprünglich von den Familien Ade und<br>
+                    Merkle betrieben, wurde der Betrieb im<br>
+                    Jahre 1960 vom Firmengründer Hans Brath<br>
+                    übernommen. Nunmehr in zweiter<br>
+                    Generation betreiben Heike & Heiko Brath<br>
+                    das Geschäft schon seit 1998.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="slike/bg2.png" alt="bg2">
+            <div class="text-overlay">
+                <h2>Heiko Brath</h2><br>
+                <h3>Metzgermeister</h3><br>
+                <p>
+                    Metzgermeister, Fleischsommelier, <br>
+                    Betriebswirt des Handwerks <br>
+                    Seit vielen Jahr auch als Grillmeister mit <br>
+                    eigenem YouTube Kanal unterwegs. <br>
+                    Bühnenshows und Seminare für Kollegen, <br> 
+                    sowie Dozent an der Fleischerschule in <br>
+                    Augsburg für Fleischsommeliers.
+                </p>
+            </div>
+        </div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
 </div>
 
 
@@ -131,13 +196,13 @@
 
 <nav class="new-navbar">
     <div class="new-navbar-content">
-        <h1>Buchen Sie den Grillkurs oder das <br> Fleischwerkstattevent jetzt<br><br>
+        <h1>Buchen Sie den <br> Grillkurs jetzt <br><br>
         </h1>
         <ul>
-            <li>Genuss pur</li>
-            <li>viel Information und Hintergrundwissen</li>
-            <li>chillige Atmosphäre</li>
-            <li>Getränke inkl.</li>
+            <li>•Genuss pur</li>
+            <li>•viel Information und Hintergrundwissen</li>
+            <li>•chillige Atmosphäre</li>
+            <li>•Getränke inkl.</li>
         </ul>
         <a href="#" class="new-navbar-button">Grillkurs</a>
     </div>
@@ -159,7 +224,10 @@
     
     <a href="#" class="handwerk-button">Das Handwerk</a><br><br><br><br>
 
-    <img src="slike/logo2.png" alt="logo2"><br><br><br>
+    <div class="logoKlasa">
+      <img src="slike/logo2.png" alt="Logo Image" class="logo-image logo-dark"> 
+      <img src="slike/logo2W.png" alt="Logo Image" class="logo-image logo-light"> 
+    </div>
 
     <div class="handwerk-images-container">
         <div class="handwerk-image-box">
@@ -203,72 +271,147 @@
 
 
 <div class="scrollmeso">
-    <div class="scrollmeso-content">
-        <h1>Fleischversand</h1>
-        <a href="#" class="scrollmeso-button">Jetzt bestellen</a>
-    </div>
+  <div class="scrollmeso-content">
+      <h1>Fleischversand</h1>
+      <a href="#" class="scrollmeso-button">Jetzt bestellen</a>
+  </div>
 </div>
 
 
 
 <div id="nagrade" class="nagrade-container">
     <div class="nagrade-content">
-        <img src="slike/genus.png" alt="Genus Image" class="genus-image">
-        <div class="left-content">
-            <h2>Metzgerei Brath ist Mitglied <br>im Genussnetzwerk</h2>
-            <button class="red-button">Gehen zu site</button>
-        </div>
+      <div class="genus-content">
+        <img src="slike/genus.png" alt="Genus Image" class="genus-image genus-dark"> 
+        <img src="slike/genusW.png" alt="Genus White Image" class="genus-image genus-light">
+      </div>
+      <div class="left-content">
+        <h2>Metzgerei Brath ist Mitglied <br>im Genussnetzwerk</h2>
+        <button class="red-button">Gehen zu site</button>
+      </div>
     </div>
-    <img src="slike/logo2.png" alt="Logo Image" class="logo-image">
+
+
+    <div class="logoKlasa">
+      <img src="slike/logo2.png" alt="Logo Image" class="logo-image logo-dark"> 
+      <img src="slike/logo2W.png" alt="Logo Image" class="logo-image logo-light">
+    </div>
+  
 
     <div class="title-with-images">
+      <div class="title-wrapper">
         <h1>Auszeichnungen</h1>
-        <div class="image-row">
-            <div class="image-with-text">
-                <img src="slike/nagrada1.png" alt="Nagrada 1">
-                <p class="gray-text">Tollit argumentum genau<br>
-                    Saepe lobortis</p>
-            </div>
-            <div class="image-with-text">
-                <img src="slike/nagrada2.png" alt="Nagrada 2">
-                <p class="gray-text">Schneewittchen<br>
-                    denique</p>
-            </div>
-            <div class="image-with-text">
-                <img src="slike/nagrada3.png" alt="Nagrada 3">
-                <p class="gray-text">Grimms Märchen<br>
-                    expetenda</p>
-            </div>
-            <div class="image-with-text">
-                <img src="slike/nagrada4.png" alt="Nagrada 4">
-                <p class="gray-text">Mettwurst mei<br> 
-                    ullum gloriatur.</p>
-            </div>
+      </div>
+      <div class="image-row">
+        <div class="image-with-text">
+          <img src="slike/nagrada1.png" alt="Nagrada 1">
+          <p class="gray-text">Tollit argumentum genau<br> Saepe lobortis</p>
         </div>
+        <div class="image-with-text">
+          <img src="slike/nagrada2.png" alt="Nagrada 2">
+          <p class="gray-text">Schneewittchen<br> denique</p>
+        </div>
+        <div class="image-with-text">
+          <img src="slike/nagrada3.png" alt="Nagrada 3">
+          <p class="gray-text">Grimms Märchen<br> expetenda</p>
+        </div>
+        <div class="image-with-text">
+          <img src="slike/nagrada4.png" alt="Nagrada 4">
+          <p class="gray-text">Mettwurst mei<br> ullum gloriatur.</p>
+        </div>
+      </div>
     </div>
-    <img src="slike/logo2.png" alt="Logo Image" class="logo-image">
 
+
+    <div class="logoKlasa">
+      <img src="slike/logo2.png" alt="Logo Image" class="logo-image logo-dark"> 
+      <img src="slike/logo2W.png" alt="Logo Image" class="logo-image logo-light">
+    </div>
+
+    
     <h2 class="subtitle">Empfehlungs</h2>
     <h1 class="main-title">Was die Leute über uns sagen</h1>
-    <div class="paragraph-container">
-        <div class="paragraph-box"> Sprechen Sie deutsch aliquip ex ea commodo 
-            consequat. Wiener Schnitzel aute irure dolor in 
-            reprehenderit Guten Tag mollit anim Stuttgart.</div>
 
-        <div class="paragraph-box">Wiener Schnitzel amet, consectetur Handtasche 
-            elit, sed do eiusmod tempor Stuttgart ut labore 
-            et dolore magna  Luftballons Ut Turnbeutel 
-            nostrud exercitation ullamco</div>
-
-        <div class="paragraph-box">Achtung fur atine indoctum complectitur 
-            HugoClub Mate mea meliore denique nominavi 
-            id. Ohrwurm expetenda nam an, his ei Reise 
-            euismod assentior.</div>
+    <div class="slider2">
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="paragraph-box2">
+                Sprechen Sie deutsch aliquip ex ea commodo <br>
+                consequat. Wiener Schnitzel aute irure dolor in <br>
+                reprehenderit Guten Tag mollit <br>
+                anim Stuttgart.<br><br><br>
+                <b>Maria Kartofeln</b>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="paragraph-box">
+                <img src="slike/nekaikonica.png" alt="ikonica" class="nekaikonica"><br>
+                Wiener Schnitzel amet, consectetur Handtasche <br>
+                elit, sed do eiusmod tempor Stuttgart ut labore <br>
+                et dolore magna  Luftballons Ut Turnbeutel <br>
+                nostrud exercitation ullamco.<br><br><br>
+                <b>Halling Tobias</b><br>
+                Koch
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="paragraph-box2">
+                Achtung fur atine indoctum complectitur <br>
+                HugoClub Mate mea meliore denique nominavi <br>
+                id. Ohrwurm expetenda nam an, his ei Reise <br>
+                euismod assentior.<br><br><br>
+                <b>Rene Weinstein</b>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      
+    <div class="button-container">
+      <button class="button">Alle Berichte</button>
     </div>
-    
-    <button class="button">Alle Berichte</button>
 </div>
 
+
+
+  <div class="donjibanner">
+    <div class="company-info">
+      <img src="slike/kontakt.png" alt="Contact">
+      <p>Klauprechtstraße  25<br>
+      76137 Karlsruhe, Germany<br>
+      +49 721 358060<br>
+      info@partyservice-brath.de</p>
+    </div>
+    <div class="logo">
+      <img src="slike/logo.PNG" alt="Company Logo" class="logoIMG">
+    </div>
+    <div class="socials">
+      <p>Besuchen Sie uns auf:</p>
+      <img src="slike/socials.png" alt="Social Media Icons">
+    </div>
+  </div>
+  
+
+
+  <div class="copyrightbanner">
+    <div class="left">
+      <p>© 2020 by Metzgerei Heiko Brath GmbH, Deutschland</p>
+    </div>
+    <div class="right">
+      <p>Code and design by <u>StudioPresent</u></p>
+    </div>
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="slider.js"></script>
 <script src="script.js"></script>
+<script src="dropdownmenu.js"></script>
+<!--<script src="popup.js"></script>-->
+<script src="responsive.js"></script>
 </body>
 </html>

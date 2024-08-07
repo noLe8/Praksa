@@ -1,0 +1,15 @@
+moras biti u C:\Users\lakin\PhpstormProjects\Praksa\my-project 
+da bi pokrenuo komandu
+npx gulp watch (da kompiluje u real time scss u css)
+
+
+
+dodati ako skontam kako:
+<script src="rellax.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  var rellax = new Rellax('.rellax', {
+    speed: 0,
+  });
+});
+</script>

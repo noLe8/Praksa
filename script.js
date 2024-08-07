@@ -1,3 +1,5 @@
+//Pamcenje poslednje kliknutog linka nakon ucitavanja nove strane
+
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll(".nav-link");
     const logoLink = document.getElementById("logo-link");
@@ -24,3 +26,31 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.removeItem("activeLinkId");
     });
 });
+
+
+//Dark/light mode
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('theme-toggle');
+
+    const applyTheme = (theme) => {
+        document.body.classList.remove('light-mode', 'dark-mode');
+        document.body.classList.add(theme);
+    };
+ 
+    const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+    applyTheme(savedTheme);
+
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        const newTheme = currentTheme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+});
+
+
+
+
+
+
